@@ -10,19 +10,6 @@ stages:
     - job: 'test'
       displayName: 'test'
       steps:
-      - task: Maven@1
-        inputs:
-          mavenPomFile: 'pom.xml'
-          goals: 'test'
-          options: '-Dtest=AppTest'
-          publishJUnitResults: true
-          testResultsFiles: '**/*.xml'
-          javaHomeOption: 'JDKVersion'
-          mavenVersionOption: 'Default'
-          mavenAuthenticateFeed: false
-          effectivePomSkip: false
-          sonarQubeRunAnalysis: false
-
       - task: PowerShell@2
         inputs:
           targetType: 'inline'

@@ -4,6 +4,21 @@ name: CICD GitHub workflow
 
 on: 
   workflow_call:
+    inputs:
+      branch:
+        description: "Branch to checkout"
+        required: true
+        type: string
+    secrets:
+      SN_DEVOPS_TOKEN:
+        description: "ServiceNow DevOps token"
+        required: true
+      SN_INSTANCE_URL:
+        description: "ServiceNow instance URL"
+        required: true
+      SN_ORCHESTRATION_TOOL_ID:
+        description: "ServiceNow orchestration tool id"
+        required: true
   # push:
   #   branches: [ "main" ]
   # pull_request:

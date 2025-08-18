@@ -69,7 +69,7 @@ jobs:
   #         xml-report-filename: testing.xml
 
   change:
-    name: Change Request
+    name: test-reuse / Change Request
     needs: build
     runs-on: ubuntu-latest
     steps:     

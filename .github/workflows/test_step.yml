@@ -3,6 +3,7 @@
 name: CICD GitHub workflow
 
 on: 
+  workflow_dispatch:
   workflow_call:
     inputs:
       branch:
@@ -23,6 +24,7 @@ on:
       SN_ORCHESTRATION_TOOL_ID:
         description: "ServiceNow orchestration tool id"
         required: true
+  
   # push:
   #   branches: [ "main" ]
   # pull_request:

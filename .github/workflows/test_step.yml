@@ -96,7 +96,7 @@ jobs:
 
   change:
     name: Change Request
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:     
       - name: ServiceNow DevOps Change Attributes
